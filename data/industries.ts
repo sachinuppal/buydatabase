@@ -1,6 +1,7 @@
 
 export const INDUSTRIES = [
     { slug: 'technology', name: 'Technology & SaaS' },
+    { slug: 'it-software', name: 'IT & Software Services' }, // Added to support likely URL patterns
     { slug: 'ecommerce', name: 'Ecommerce & D2C' },
     { slug: 'healthcare', name: 'Healthcare & Hospitals' },
     { slug: 'manufacturing', name: 'Manufacturing & Operations' },

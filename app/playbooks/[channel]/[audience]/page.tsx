@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/ui/hero";
 import { Section } from "@/components/ui/section";
-import { Container } from "@/components/ui/container";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { CTA } from "@/components/ui/cta";
 import { ALL_ROLES } from "@/data/roles";
+import { PLAYBOOKS } from "@/data/playbooks";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,35 @@ export default async function PlaybookPage({ params }: { params: Promise<{ chann
     // 1. Validator: Channel
     if (channel !== 'email' && channel !== 'linkedin') return notFound();
 
-    // 2. Validator: Audience (Must be a valid Role)
+    // 2. Check for Specific Curated Playbook First
+    const curatedPlaybook = PLAYBOOKS.find(p => p.channel === channel && p.audience === audience);
+
+    if (curatedPlaybook) {
+        return (
+            <div className="flex flex-col min-h-screen">
+                <Breadcrumbs items={[
+                    { label: 'Playbooks', href: '/playbooks' },
+                    { label: channel === 'email' ? 'Email Outreach' : 'LinkedIn Ads', href: `/playbooks` }, // Pointing to index for now or we could add channel specific index
+                    { label: curatedPlaybook.title, href: `/playbooks/${channel}/${audience}` }
+                ]} />
+
+                <Hero
+                    heading={curatedPlaybook.title}
+                    subheading={curatedPlaybook.description}
+                />
+
+                <Section>
+                    <div className="prose max-w-3xl mx-auto dark:prose-invert leading-relaxed">
+                        {curatedPlaybook.content}
+                    </div>
+                </Section>
+
+                <CTA title="Get the Data for This Playbook" />
+            </div>
+        );
+    }
+
+    // 3. Fallback: Generic Role-Based Validator
     const validRole = ALL_ROLES.find(r => r.slug === audience);
     if (!validRole) return notFound();
 

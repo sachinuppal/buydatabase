@@ -1,22 +1,15 @@
-
 import { Hero } from '@/components/ui/hero';
 import { Section } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { BLOG_POSTS } from '@/data/blog-posts';
+import { ArrowRight, Calendar, Tag } from 'lucide-react';
 
 export const metadata: Metadata = {
     title: "Blog — BuyDatabase.ai",
     description: "Insights on audience building, data activation, compliance, outbound strategy, and segmentation—built for modern revenue teams.",
 };
-
-const CATEGORIES = [
-    { title: "Audience Building", desc: "How to define the right segment before you buy data." },
-    { title: "Outbound & ABM", desc: "Playbooks for messaging, targeting, and sequencing." },
-    { title: "Recruitment & Talent", desc: "Sourcing strategies, role-based targeting, and hiring pipelines." },
-    { title: "Compliance & Trust", desc: "GDPR/DPDP basics, consent, opt-outs, and responsible use." },
-    { title: "Data Ops", desc: "Cleaning, deduplication, enrichment, and CRM imports." },
-];
 
 export default function BlogPage() {
     return (
@@ -28,25 +21,44 @@ export default function BlogPage() {
 
             <Section>
                 <div className="max-w-5xl mx-auto">
-
-                    {/* Categories Grid */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                        {CATEGORIES.map((cat, i) => (
-                            <div key={i} className="p-6 bg-card border rounded-xl hover:shadow-md transition-all">
-                                <h3 className="font-bold text-lg mb-2">{cat.title}</h3>
-                                <p className="text-sm text-muted-foreground">{cat.desc}</p>
-                            </div>
+                    <div className="grid md:grid-cols-2 gap-8 mb-16">
+                        {BLOG_POSTS.map((post) => (
+                            <Link
+                                key={post.slug}
+                                href={`/blog/${post.slug}`}
+                                className="group block bg-card border rounded-2xl overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300"
+                            >
+                                <div className="p-8">
+                                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
+                                        <span className="flex items-center gap-1 bg-muted px-2 py-1 rounded-md font-medium">
+                                            <Tag className="h-3 w-3" />
+                                            {post.category}
+                                        </span>
+                                        <span className="flex items-center gap-1">
+                                            <Calendar className="h-3 w-3" />
+                                            {post.publishedAt}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                                        {post.title}
+                                    </h3>
+                                    <p className="text-muted-foreground mb-6 line-clamp-3 leading-relaxed">
+                                        {post.description}
+                                    </p>
+                                    <div className="flex items-center text-primary font-medium text-sm">
+                                        Read Article <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
 
-                    {/* Empty State / CTA */}
-                    <div className="text-center py-16 bg-muted/20 rounded-2xl">
-                        <h2 className="text-2xl font-bold mb-4">We’re publishing new posts soon.</h2>
-                        <p className="text-muted-foreground mb-8">In the meantime:</p>
+                    <div className="text-center py-16 border-t">
+                        <h2 className="text-2xl font-bold mb-4">Need help applying these strategies?</h2>
+                        <p className="text-muted-foreground mb-8">Start by finding the right audience for your next campaign.</p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link href="/datasets"><Button variant="outline">Browse datasets</Button></Link>
-                            <Link href="/audiences"><Button variant="outline">Browse audiences</Button></Link>
-                            <Link href="/how-it-works"><Button variant="outline">Learn how it works</Button></Link>
+                            <Link href="/datasets"><Button size="lg">Browse Datasets</Button></Link>
+                            <Link href="/audiences"><Button size="lg" variant="outline">Explore Audiences</Button></Link>
                         </div>
                     </div>
 

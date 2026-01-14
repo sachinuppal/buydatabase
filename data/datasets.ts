@@ -7,7 +7,7 @@ export interface Dataset {
     slug: string;
     name: string;
     description: string;
-    region: 'India' | 'Global' | 'USA' | 'UK' | 'APAC' | 'EMEA' | 'Gulf' | 'Australia' | 'Canada';
+    region: 'India' | 'Global' | 'USA' | 'UK' | 'APAC' | 'EMEA' | 'Gulf' | 'Australia' | 'Canada' | 'Europe';
     type: 'B2B' | 'Industry' | 'Role' | 'Intent' | 'Niche';
     price?: string;
     recordCount?: string;
@@ -100,6 +100,7 @@ export const DATASETS: Dataset[] = [
     { slug: 'global-b2b-decision-makers', name: 'Global B2B Decision Makers', description: 'International business leaders for export-oriented campaigns targeting US, UK, and EU.', region: 'Global', type: 'B2B', recordCount: '45M+' },
     { slug: 'apac-enterprise-leaders', name: 'APAC Enterprise Leaders', description: 'Senior management in key Asian Pacific markets including Singapore, Australia, and Japan.', region: 'APAC', type: 'B2B', recordCount: '5M+' },
     { slug: 'usa-saas-founders-and-executives', name: 'USA SaaS Founders & Executives', description: 'Direct access to tech leaders and founders in the United States startup ecosystem.', region: 'USA', type: 'Role', recordCount: '150K+' },
+    { slug: 'europe-b2b-decision-makers', name: 'Europe B2B Decision Makers', description: 'Comprehensive database of business leaders across UK, Germany, France, Netherlands, and Nordics.', region: 'Europe', type: 'B2B', recordCount: '8M+' },
 
     // INDUSTRY SPECIFIC
     { slug: 'real-estate-industry-professionals-india', name: 'Real Estate Professionals India', description: 'Builders, brokers, consultants, and developers in the Indian property market.', region: 'India', type: 'Industry', recordCount: '300K+' },

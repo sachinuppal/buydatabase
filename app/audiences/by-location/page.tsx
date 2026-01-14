@@ -58,7 +58,7 @@ export default function AudiencesByLocationPage() {
                         {topCities.map((city) => (
                             <Link
                                 key={city.slug}
-                                href={`/audiences/by-location/india/${city.slug}`}
+                                href={`/audiences/india/${city.slug}`}
                                 className="group p-4 bg-card border rounded-lg hover:border-primary hover:shadow-sm transition-all flex items-center justify-between"
                             >
                                 <span className="font-medium">{city.name} Audiences</span>

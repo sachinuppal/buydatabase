@@ -297,4 +297,5 @@ export const COUNTRIES = [
   { slug: 'australia', name: 'Australia' },
   { slug: 'canada', name: 'Canada' },
   { slug: 'uae', name: 'UAE' },
+  { slug: 'europe', name: 'Europe' },
 ] as const;
