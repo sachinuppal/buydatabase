@@ -7,15 +7,22 @@ import { ALL_PACKAGES } from '@/data/packages';
 // Note: In a real admin scenario, we would use a Service Role Key here to bypass RLS.
 // Since we only have the Anon Key available in env, we must rely on RLS policies allowing this,
 // or the user manually running this logic.
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-// Prefer Service Role if available to bypass RLS
-const clientKey = serviceRoleKey || supabaseAnonKey;
-const supabase = createClient(supabaseUrl, clientKey);
-
+// Initialize Supabase Client inside the handler to avoid build-time errors if env vars are missing
 export async function GET() {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !supabaseAnonKey) {
+        return NextResponse.json({
+            success: false,
+            error: "Missing Supabase environment variables. Please check your .env file or Vercel project settings."
+        }, { status: 500 });
+    }
+
+    // Prefer Service Role if available to bypass RLS
+    const clientKey = serviceRoleKey || supabaseAnonKey;
+    const supabase = createClient(supabaseUrl, clientKey);
     try {
         console.log("Starting seed process...");
 
