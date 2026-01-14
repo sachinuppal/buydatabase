@@ -143,7 +143,7 @@ export function Header() {
                             Contact
                         </LeadCaptureTrigger>
                         <Link href="/audiences">
-                            <Button variant="premium" size="default">Explore Audiences</Button>
+                            <Button variant="premium" size="default" className="hidden md:inline-flex">Explore Audiences</Button>
                         </Link>
 
                         {/* Mobile Menu Toggle */}
