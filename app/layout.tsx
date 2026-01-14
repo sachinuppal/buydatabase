@@ -87,7 +87,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col overflow-x-hidden`}
       >
         <AuthProvider>
           <CartProvider>

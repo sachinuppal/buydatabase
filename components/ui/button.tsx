@@ -22,10 +22,10 @@ const buttonVariants = cva(
                 premium: "bg-premium-gradient text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300", // Custom premium variant
             },
             size: {
-                default: "h-9 px-4 py-2",
-                sm: "h-8 rounded-md px-3 text-xs",
-                lg: "h-10 rounded-md px-8",
-                icon: "h-9 w-9",
+                default: "h-10 px-4 py-2", // Increased from h-9 for better touch
+                sm: "h-9 rounded-md px-3 text-xs", // Increased from h-8
+                lg: "h-11 rounded-md px-8", // Increased from h-10
+                icon: "h-10 w-10", // Increased from h-9
                 xl: "h-12 rounded-lg px-8 text-base",
             },
         },
