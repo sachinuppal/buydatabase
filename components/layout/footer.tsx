@@ -93,10 +93,22 @@ export function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} BuyDatabase.ai. All rights reserved.</p>
-                    <div className="mt-2 md:mt-0 px-3 py-1 bg-muted rounded-full">
-                        Sensitive personal data is not publicly exposed.
+                <div className="pt-8 border-t">
+                    {/* Trust Microcopy Strip */}
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-xs text-muted-foreground">
+                        <span>DPDP/GDPR-aware workflows</span>
+                        <span className="hidden md:inline">•</span>
+                        <span>Opt-out support</span>
+                        <span className="hidden md:inline">•</span>
+                        <span>Purpose-limited use</span>
+                        <span className="hidden md:inline">•</span>
+                        <span>Transparent sourcing</span>
+                    </div>
+                    <div className="flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
+                        <p>&copy; {new Date().getFullYear()} BuyDatabase.ai. All rights reserved.</p>
+                        <div className="mt-2 md:mt-0 px-3 py-1 bg-muted rounded-full">
+                            Relevant audiences. Responsible outreach.
+                        </div>
                     </div>
                 </div>
             </Container>

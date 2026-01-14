@@ -6,6 +6,9 @@ import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Briefcase, Database, Shield, Zap, TrendingUp, Check } from "lucide-react";
 import { Metadata } from 'next';
+import { AllDatasetsList } from "@/components/home/all-datasets-list";
+import AudienceAltGraphic from "@/components/home/audience-alt-graphic";
+import { InstantSearch } from "@/components/ui/instant-search";
 
 export const metadata: Metadata = {
   title: "BuyDatabase.ai – Discover & Activate High-Intent Business Audiences",
@@ -20,14 +23,26 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <Container className="text-center flex flex-col items-center">
           <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20 mb-6">
-            Built for teams who run campaigns — not spreadsheets
+            Not a bulk list seller — segment-first audience intelligence
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight text-foreground max-w-5xl mb-6">
             Discover & Activate the <span className="text-premium-gradient">Right Audience</span> for Your Campaigns
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed mb-10">
-            BuyDatabase.ai is an <strong>audience discovery and activation platform</strong> that helps businesses find <strong>high-intent, segmented audiences</strong> by location, role, industry, and buying signals.
+          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed mb-4">
+            BuyDatabase.ai helps you identify <strong>who</strong> to target, <strong>why</strong> they're relevant, and <strong>how</strong> to reach them responsibly.
           </p>
+          <p className="text-base text-muted-foreground max-w-2xl leading-relaxed mb-8">
+            Turn noisy "raw lists" into <strong>clean segments</strong> you can actually message. Context over volume: geography, role, industry, and intent signals—combined.
+          </p>
+
+          {/* Instant Search */}
+          <div className="w-full max-w-2xl mb-8">
+            <InstantSearch
+              variant="hero"
+              placeholder="Search datasets, cities, roles, industries..."
+            />
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <Link href="/audiences">
               <Button size="xl" variant="premium">
@@ -41,67 +56,54 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm font-medium text-muted-foreground">
-            <span className="flex items-center"><Check className="h-4 w-4 mr-2 text-primary" /> Explore audiences</span>
-            <span className="flex items-center"><Check className="h-4 w-4 mr-2 text-primary" /> Understand who matters</span>
-            <span className="flex items-center"><Check className="h-4 w-4 mr-2 text-primary" /> Activate responsibly</span>
+            <span className="flex items-center"><Check className="h-4 w-4 mr-2 text-primary" /> Segment-first targeting</span>
+            <span className="flex items-center"><Check className="h-4 w-4 mr-2 text-primary" /> Transparent sourcing</span>
+            <span className="flex items-center"><Check className="h-4 w-4 mr-2 text-primary" /> Responsible outreach</span>
           </div>
         </Container>
       </section>
 
       {/* 2. WHAT IS BUYDATABASE.AI? */}
       <Section className="bg-muted/30">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-heading font-bold mb-6">A modern alternative to buying raw lists</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              BuyDatabase.ai is not a “bulk data seller”. We help you discover <strong>who your buyers actually are</strong>, segment audiences by <strong>real business relevance</strong>, and plan campaigns with context, not noise.
-            </p>
-            <div className="space-y-4">
-              {[
-                { icon: MapPin, text: "Location & Geography" },
-                { icon: Briefcase, text: "Role & Seniority" },
-                { icon: Database, text: "Industry & Verticals" },
-                { icon: TrendingUp, text: "Company Stage & Intent" }
-              ].map((item, i) => (
-                <div key={i} className="flex items-center p-3 bg-background rounded-lg border shadow-sm">
-                  <item.icon className="h-5 w-5 text-primary mr-3" />
-                  <span className="font-medium">{item.text}</span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8">
-              <Link href="/datasets">
-                <Button variant="default" size="lg">Browse Dataset Library <ArrowRight className="ml-2 h-4 w-4" /></Button>
-              </Link>
-            </div>
-          </div>
-          <div className="relative">
-            {/* Visual abstraction of the platform */}
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border flex items-center justify-center p-8">
-              <div className="grid grid-cols-2 gap-4 w-full max-w-md">
-                <div className="bg-card p-4 rounded-xl shadow-lg border animate-in fade-in zoom-in duration-500 delay-100">
-                  <div className="h-2 w-12 bg-primary/20 rounded mb-2" />
-                  <div className="h-4 w-24 bg-foreground/10 rounded mb-1" />
-                  <div className="h-3 w-16 bg-muted-foreground/10 rounded" />
-                </div>
-                <div className="bg-card p-4 rounded-xl shadow-lg border animate-in fade-in zoom-in duration-500 delay-200 mt-8">
-                  <div className="h-2 w-12 bg-secondary/80 rounded mb-2" />
-                  <div className="h-4 w-24 bg-foreground/10 rounded mb-1" />
-                  <div className="h-3 w-16 bg-muted-foreground/10 rounded" />
-                </div>
-                <div className="bg-card p-4 rounded-xl shadow-lg border animate-in fade-in zoom-in duration-500 delay-300">
-                  <div className="h-2 w-12 bg-primary/20 rounded mb-2" />
-                  <div className="h-4 w-24 bg-foreground/10 rounded mb-1" />
-                  <div className="h-3 w-16 bg-muted-foreground/10 rounded" />
-                </div>
-                <div className="bg-card p-4 rounded-xl shadow-lg border animate-in fade-in zoom-in duration-500 delay-400 mt-8">
-                  <div className="h-2 w-12 bg-secondary/80 rounded mb-2" />
-                  <div className="h-4 w-24 bg-foreground/10 rounded mb-1" />
-                  <div className="h-3 w-16 bg-muted-foreground/10 rounded" />
-                </div>
+        <AudienceAltGraphic />
+      </Section>
+
+      {/* HOW IT WORKS - AEO-ready 3-step */}
+      <Section>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl font-heading font-bold mb-4">How BuyDatabase.ai Works</h2>
+          <p className="text-muted-foreground">Three steps from targeting to activation</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              step: "1",
+              title: "Pick your audience",
+              desc: "Filter by location, role, industry, and intent. Define exactly who you want to reach.",
+              icon: MapPin
+            },
+            {
+              step: "2",
+              title: "Preview your segment",
+              desc: "See available fields, coverage, freshness, and sample records before you buy.",
+              icon: Database
+            },
+            {
+              step: "3",
+              title: "Buy & access securely",
+              desc: "Instant download for ready packs, or prepared delivery for custom slices—stored in your library.",
+              icon: Shield
+            }
+          ].map((item, i) => (
+            <div key={i} className="relative p-6 bg-card border rounded-xl text-center">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                {item.step}
               </div>
+              <item.icon className="h-8 w-8 text-primary mx-auto mt-4 mb-4" />
+              <h3 className="font-heading font-bold text-lg mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground">{item.desc}</p>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
@@ -188,22 +190,15 @@ export default function Home() {
 
       {/* 6. DATASETS */}
       <Section className="bg-muted/30">
-        <h2 className="text-3xl font-heading font-bold mb-4">Structured audience intelligence, not raw dumps</h2>
-        <p className="text-muted-foreground mb-10 max-w-2xl">Our datasets are designed for planning, segmentation, and activation.</p>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-heading font-bold mb-4">Structured audience intelligence, not raw dumps</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Browse our complete catalog of verified B2B datasets. Instantly available for download or delivery.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            { label: "India B2B Professionals Dataset", href: "/datasets/india-b2b-professionals/" },
-            { label: "Senior Decision Makers – India", href: "/datasets/india-senior-decision-makers/" },
-            { label: "HR & Talent Leaders – India", href: "/datasets/india-hr-and-talent-leaders/" },
-            { label: "High-Growth Companies – India", href: "/datasets/high-growth-companies-india/" }
-          ].map((ds) => (
-            <Link key={ds.href} href={ds.href} className="flex items-center p-4 bg-background border rounded-lg hover:border-primary transition-colors">
-              <Database className="h-5 w-5 text-primary mr-4" />
-              <span className="font-semibold text-lg">{ds.label}</span>
-              <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
-            </Link>
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <AllDatasetsList />
         </div>
       </Section>
 

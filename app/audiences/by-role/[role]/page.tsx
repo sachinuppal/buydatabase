@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Hero } from '@/components/ui/hero';
@@ -13,6 +12,7 @@ import { DATASETS } from '@/data/datasets';
 import { Metadata } from 'next';
 import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
+import { AllDatasetsList } from '@/components/home/all-datasets-list';
 
 interface Params {
     role: string;
@@ -312,6 +312,18 @@ export default async function RoleIndexPage({ params }: { params: Promise<Params
                     <div className="flex flex-wrap gap-4 justify-center">
                         <LeadCaptureTrigger asChild><Button size="lg">Request custom list</Button></LeadCaptureTrigger>
                         <Link href="/audiences"><Button variant="outline" size="lg">Explore other roles</Button></Link>
+                    </div>
+                </div>
+                {/* Explore All Datasets Section */}
+                <div className="mt-16 pt-12 border-t">
+                    <div className="text-center mb-10">
+                        <h2 className="text-2xl font-heading font-bold mb-4">Browse all verified B2B datasets</h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">
+                            Instantly available for download or delivery. Context-first segmentation, not bulk dumps.
+                        </p>
+                    </div>
+                    <div className="max-w-5xl mx-auto">
+                        <AllDatasetsList />
                     </div>
                 </div>
 

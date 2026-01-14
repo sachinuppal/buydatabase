@@ -7,15 +7,18 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { MAIN_NAV } from '@/data/navigation';
 import { cn } from "@/lib/utils";
-import { Menu, X, Database, ChevronDown } from "lucide-react";
+import { Menu, X, Database, ChevronDown, User } from "lucide-react";
 import { useState, useEffect } from "react";
 import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
+import { CartDrawer } from "@/components/cart/cart-drawer";
+import { useAuth } from "@/context/auth-context";
 
 export function Header() {
     const pathname = usePathname();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+    const { user } = useAuth();
 
     // Handle scroll effect
     useEffect(() => {
@@ -117,6 +120,25 @@ export function Header() {
 
                     {/* CTA & Mobile Toggle */}
                     <div className="flex items-center space-x-4 z-50">
+                        <CartDrawer />
+
+                        {user ? (
+                            <div className="flex items-center gap-4">
+                                <Link href="/account">
+                                    <Button variant="ghost" size="sm" className="hidden sm:inline-flex gap-2">
+                                        <User className="h-4 w-4" />
+                                        My Account
+                                    </Button>
+                                </Link>
+                            </div>
+                        ) : (
+                            <Link href="/login">
+                                <Button variant="ghost" size="sm" className="hidden sm:flex">
+                                    Log in
+                                </Button>
+                            </Link>
+                        )}
+
                         <LeadCaptureTrigger className="cursor-pointer font-medium text-sm text-muted-foreground hover:text-foreground hidden lg:block">
                             Contact
                         </LeadCaptureTrigger>
@@ -176,6 +198,8 @@ export function Header() {
                                     <Button size="lg" className="w-full" variant="outline">Contact Support</Button>
                                 </Link>
                             </div>
+                            {/* Actions & Mobile Menu (Mobile View) */}
+                            {/* ... (Mobile menu actions if needed, or kept simple) ... */}
                         </div>
                     </div>
                 )}

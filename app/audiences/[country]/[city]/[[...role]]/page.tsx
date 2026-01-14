@@ -12,6 +12,7 @@ import { Metadata } from 'next';
 import { Check, Shield, TrendingUp, Users, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { getRelatedRoles, getNearbyCities, getRelevantDatasets } from '@/lib/internal-linking';
+import { AllDatasetsList } from '@/components/home/all-datasets-list';
 
 // VALIDATION UTILS
 function getCityData(slug: string) {
@@ -262,6 +263,19 @@ export default async function AudienceCatchAllPage({ params }: { params: Promise
                             </Link>
                         ))}
                     </div>
+                </div>
+            </Section>
+
+            {/* Explore All Datasets Section */}
+            <Section className="bg-muted/30">
+                <div className="text-center mb-10">
+                    <h2 className="text-2xl font-heading font-bold mb-4">Browse all verified B2B datasets</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto">
+                        Instantly available for download or delivery. Context-first segmentation, not bulk dumps.
+                    </p>
+                </div>
+                <div className="max-w-5xl mx-auto">
+                    <AllDatasetsList />
                 </div>
             </Section>
 
