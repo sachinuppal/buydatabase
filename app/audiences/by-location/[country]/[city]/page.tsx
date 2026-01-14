@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { notFound } from 'next/navigation';
 import { Hero } from '@/components/ui/hero';
 import { Section } from '@/components/ui/section';
@@ -170,7 +171,7 @@ export default async function CityIndexPage({ params }: { params: Promise<Params
                 <div className="text-center">
                     <h3 className="text-2xl font-bold mb-6">Ready to activate your campaign in {cityData.name}?</h3>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link href="/contact"><Button size="lg">Talk to an expert</Button></Link>
+                        <LeadCaptureTrigger asChild><Button size="lg">Talk to an expert</Button></LeadCaptureTrigger>
                         <Link href="/datasets"><Button variant="outline" size="lg">Explore all datasets</Button></Link>
                     </div>
                 </div>

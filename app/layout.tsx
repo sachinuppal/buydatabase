@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   }
 };
 
+import { LeadCaptureProvider } from "@/components/lead-capture/lead-capture-context";
+import { LeadCaptureModal } from "@/components/lead-capture/lead-capture-modal";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,10 +38,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased`}
       >
-        <GlobalSchema />
-        <Header />
-        <main className="flex-1 flex flex-col">{children}</main>
-        <Footer />
+        <LeadCaptureProvider>
+          <GlobalSchema />
+          <Header />
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+          <LeadCaptureModal />
+        </LeadCaptureProvider>
       </body>
     </html>
   );

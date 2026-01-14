@@ -12,6 +12,7 @@ import { ALL_CITIES } from '@/data/locations';
 import { DATASETS } from '@/data/datasets';
 import { Metadata } from 'next';
 import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 
 interface Params {
     role: string;
@@ -203,9 +204,9 @@ export default async function RoleIndexPage({ params }: { params: Promise<Params
                             <Link href="/pricing" className={buttonVariants({ size: "lg" })}>
                                 View Pricing
                             </Link>
-                            <Link href="/contact" className={buttonVariants({ variant: "outline", size: "lg" })}>
-                                Get Sample Data
-                            </Link>
+                            <LeadCaptureTrigger asChild>
+                                <Button variant="outline" size="lg">Get Sample Data</Button>
+                            </LeadCaptureTrigger>
                         </div>
                     </div>
 
@@ -309,7 +310,7 @@ export default async function RoleIndexPage({ params }: { params: Promise<Params
                         Don't see exactly what you need? We can build a custom segment matching your specific criteria including seniority, technology stack, and intent.
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
-                        <Link href="/contact"><Button size="lg">Request custom list</Button></Link>
+                        <LeadCaptureTrigger asChild><Button size="lg">Request custom list</Button></LeadCaptureTrigger>
                         <Link href="/audiences"><Button variant="outline" size="lg">Explore other roles</Button></Link>
                     </div>
                 </div>

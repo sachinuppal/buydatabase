@@ -4,6 +4,7 @@ import { Section } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { ArrowRight, ShieldCheck, CheckCircle2, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -123,7 +124,7 @@ export default function AboutPage() {
                         <div className="border-t pt-8 max-w-md mx-auto">
                             <h3 className="text-xl font-bold mb-2">Want help choosing the right dataset?</h3>
                             <p className="text-muted-foreground mb-4">Contact us and we’ll point you to the best fit.</p>
-                            <Link href="/contact"><Button size="lg">Contact Us</Button></Link>
+                            <LeadCaptureTrigger asChild><Button size="lg">Contact Us</Button></LeadCaptureTrigger>
                         </div>
                     </div>
 

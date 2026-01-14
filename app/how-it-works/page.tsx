@@ -4,6 +4,7 @@ import { Section } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { Search, Info, ShoppingCart, Zap, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -106,7 +107,7 @@ export default function HowItWorksPage() {
                         <div className="flex flex-wrap justify-center gap-4">
                             <Link href="/datasets"><Button size="lg">Browse Datasets</Button></Link>
                             <Link href="/audiences"><Button variant="outline" size="lg">Browse Audiences</Button></Link>
-                            <Link href="/contact"><Button variant="ghost" size="lg">Contact Sales</Button></Link>
+                            <LeadCaptureTrigger asChild><Button variant="ghost" size="lg">Contact Sales</Button></LeadCaptureTrigger>
                         </div>
                     </div>
 

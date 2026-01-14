@@ -6,6 +6,7 @@ import { DATASETS } from '@/data/datasets';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { Button } from '@/components/ui/button';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { ArrowRight } from 'lucide-react';
@@ -76,7 +77,7 @@ export default async function DatasetRolePage({ params }: { params: Promise<Para
                     ) : (
                         <div className="text-center py-12 bg-muted/20 rounded-xl">
                             <p className="text-muted-foreground mb-4">No specific pre-built bundles found for this exact role, but we have them in our master database.</p>
-                            <Link href="/contact"><Button>Request {role.name} Data</Button></Link>
+                            <LeadCaptureTrigger asChild><Button>Request {role.name} Data</Button></LeadCaptureTrigger>
                         </div>
                     )}
                 </div>

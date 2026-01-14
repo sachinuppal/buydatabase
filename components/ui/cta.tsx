@@ -1,9 +1,10 @@
+"use client";
 
-import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLeadCapture } from "@/components/lead-capture/lead-capture-context";
 
 interface CTAProps {
     title?: string;
@@ -20,6 +21,8 @@ export function CTA({
     href = "/contact",
     className,
 }: CTAProps) {
+    const { openCapture } = useLeadCapture();
+
     return (
         <section className={cn("py-16 md:py-24 bg-muted/30 border-t", className)}>
             <Container>
@@ -29,12 +32,15 @@ export function CTA({
                         <p className="text-lg text-muted-foreground">{description}</p>
                     </div>
                     <div className="flex-shrink-0">
-                        <Link href={href}>
-                            <Button size="xl" variant="premium" className="group">
-                                {buttonText}
-                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </Button>
-                        </Link>
+                        <Button
+                            size="xl"
+                            variant="premium"
+                            className="group"
+                            onClick={openCapture}
+                        >
+                            {buttonText}
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Button>
                     </div>
                 </div>
             </Container>

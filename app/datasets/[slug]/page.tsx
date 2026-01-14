@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { getRelatedAudiencesForDataset } from '@/lib/internal-linking';
 import { DATASETS, getDatasetBySlug } from '@/data/datasets';
 import { ALL_CITIES, COUNTRIES } from '@/data/locations'; // Import Regions
@@ -108,9 +109,9 @@ export default async function DatasetPage({ params }: { params: Promise<{ slug: 
                     heading={`${dataset.name} – Campaign-Ready Audience Dataset`}
                     subheading={`Access ${dataset.recordCount || 'verified'} records. Identify, understand, and activate ${dataset.name} professionals with precision.`}
                 >
-                    <Link href="/contact">
+                    <LeadCaptureTrigger asChild>
                         <Button size="xl" variant="premium">Activate This Audience</Button>
-                    </Link>
+                    </LeadCaptureTrigger>
                 </Hero>
 
                 <Section title="What This Dataset Includes">

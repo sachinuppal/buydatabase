@@ -9,6 +9,7 @@ import { MAIN_NAV } from '@/data/navigation';
 import { cn } from "@/lib/utils";
 import { Menu, X, Database, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 
 export function Header() {
     const pathname = usePathname();
@@ -116,9 +117,9 @@ export function Header() {
 
                     {/* CTA & Mobile Toggle */}
                     <div className="flex items-center space-x-4 z-50">
-                        <Link href="/contact" className="hidden lg:block text-sm font-medium text-muted-foreground hover:text-foreground">
+                        <LeadCaptureTrigger className="cursor-pointer font-medium text-sm text-muted-foreground hover:text-foreground hidden lg:block">
                             Contact
-                        </Link>
+                        </LeadCaptureTrigger>
                         <Link href="/audiences">
                             <Button variant="premium" size="default">Explore Audiences</Button>
                         </Link>

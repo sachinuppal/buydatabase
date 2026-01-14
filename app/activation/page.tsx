@@ -4,6 +4,7 @@ import { Section } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { Target, Users, Search, CheckSquare, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -107,7 +108,7 @@ export default function ActivationPage() {
                     {/* CTA */}
                     <div className="text-center bg-primary/5 rounded-2xl p-12">
                         <h2 className="text-2xl font-bold mb-4">Want help choosing the right dataset + activation plan?</h2>
-                        <Link href="/contact"><Button size="lg">Contact Us</Button></Link>
+                        <LeadCaptureTrigger asChild><Button size="lg">Contact Us</Button></LeadCaptureTrigger>
                     </div>
 
                 </div>

@@ -5,6 +5,7 @@ import { INDUSTRIES } from '@/data/industries';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { Button } from '@/components/ui/button';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 
@@ -59,9 +60,9 @@ export default async function IndustryDetailPage({ params }: { params: Promise<P
                     <p className="text-sm text-muted-foreground italic mb-12">
                         (Specific segment lists for this industry are being indexed. Contact sales for custom pulls.)
                     </p>
-                    <Link href="/contact">
+                    <LeadCaptureTrigger asChild>
                         <Button size="lg">Request {data.name} Data</Button>
-                    </Link>
+                    </LeadCaptureTrigger>
                 </div>
             </Section>
         </div>

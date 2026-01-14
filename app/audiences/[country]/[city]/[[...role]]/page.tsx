@@ -1,6 +1,7 @@
 
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { Hero } from '@/components/ui/hero';
 import { Section } from '@/components/ui/section';
 import { Breadcrumbs } from '@/components/ui/breadcrumbs';
@@ -142,9 +143,9 @@ export default async function AudienceCatchAllPage({ params }: { params: Promise
                 heading={`${role.name} in ${city.name}`}
                 subheading={`Instant access to verified ${role.singular} emails and phone numbers in ${city.name}. High accuracy compliant B2B data.`}
             >
-                <Link href="/contact">
+                <LeadCaptureTrigger asChild>
                     <Button size="xl" variant="premium">Get This Data</Button>
-                </Link>
+                </LeadCaptureTrigger>
             </Hero>
 
             {/* Value Props */}

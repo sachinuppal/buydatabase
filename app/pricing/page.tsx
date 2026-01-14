@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Check, Info } from 'lucide-react';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 
 export const metadata: Metadata = {
     title: "Pricing — BuyDatabase.ai",
@@ -65,9 +66,9 @@ export default function PricingPage() {
                             <p className="text-muted-foreground flex-1 mb-6">
                                 Request a tailored build if you need a unique combination, exclusion rules, or a specific schema.
                             </p>
-                            <Link href="/contact">
+                            <LeadCaptureTrigger asChild>
                                 <Button className="w-full">Request Build</Button>
-                            </Link>
+                            </LeadCaptureTrigger>
                         </div>
 
                         <div className="border rounded-2xl p-8 bg-card flex flex-col">
@@ -76,9 +77,9 @@ export default function PricingPage() {
                             <p className="text-muted-foreground flex-1 mb-6">
                                 Set a refresh schedule so your dataset stays current for teams running continuous campaigns.
                             </p>
-                            <Link href="/contact">
+                            <LeadCaptureTrigger asChild>
                                 <Button variant="outline" className="w-full">Contact Sales</Button>
-                            </Link>
+                            </LeadCaptureTrigger>
                         </div>
                     </div>
 
@@ -108,7 +109,7 @@ export default function PricingPage() {
                     <div className="text-center">
                         <h2 className="text-2xl font-bold mb-6">Get a quote or recommendation</h2>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link href="/contact"><Button size="lg">Contact Us</Button></Link>
+                            <LeadCaptureTrigger asChild><Button size="lg">Contact Us</Button></LeadCaptureTrigger>
                             <Link href="/datasets"><Button variant="outline" size="lg">Browse Datasets</Button></Link>
                         </div>
                     </div>

@@ -38,10 +38,10 @@ export default function DatasetsIndexPage() {
                         <Link href="/datasets">
                             <Button size="lg" variant="default">Browse All Datasets</Button>
                         </Link>
-                        <Link href="/datasets">
+                        <Link href="/datasets/by-country">
                             <Button size="lg" variant="outline">Browse by Country</Button>
                         </Link>
-                        <Link href="/datasets">
+                        <Link href="/datasets/by-role">
                             <Button size="lg" variant="outline">Browse by Role</Button>
                         </Link>
                     </div>

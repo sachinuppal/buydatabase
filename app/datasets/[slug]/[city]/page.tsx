@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { LeadCaptureTrigger } from "@/components/lead-capture/lead-capture-trigger";
 import { ALL_CITIES, COUNTRIES } from '@/data/locations';
 import { DATASETS } from '@/data/datasets';
 import { Hero } from '@/components/ui/hero';
@@ -69,9 +70,11 @@ export default async function CityDatasetPage({ params }: { params: Promise<{ sl
                 subheading={`Reach decision makers and companies in ${cityData.name}, ${countryData.name}. Verified direct dials and emails for high-converting campaigns.`}
             >
                 <div className="flex gap-4 justify-center">
-                    <Link href="/contact" className="btn btn-primary btn-lg">
-                        Get Sample Data
-                    </Link>
+                    <LeadCaptureTrigger asChild>
+                        <Link href="/contact" className="btn btn-primary btn-lg">
+                            Get Sample Data
+                        </Link>
+                    </LeadCaptureTrigger>
                 </div>
             </Hero>
 
