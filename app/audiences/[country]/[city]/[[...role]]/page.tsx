@@ -135,6 +135,13 @@ export default async function AudienceCatchAllPage({ params }: { params: Promise
                             "@type": "Brand",
                             "name": "BuyDatabase.ai"
                         },
+                        "offers": {
+                            "@type": "AggregateOffer",
+                            "priceCurrency": "USD",
+                            "lowPrice": "99",
+                            "availability": "https://schema.org/InStock",
+                            "offerCount": "1"
+                        },
                         "areaServed": city.name
                     })
                 }}
