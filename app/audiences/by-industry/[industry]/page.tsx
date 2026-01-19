@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     return {
         title: `${data.name} Audience Lists | BuyDatabase.ai`,
         description: `Verified B2B contacts and decision makers in the ${data.name} industry.`,
+        alternates: {
+            canonical: `https://www.buydatabase.ai/audiences/by-industry/${slug}`,
+        }
     };
 }
 

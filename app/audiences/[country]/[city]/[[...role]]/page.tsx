@@ -37,13 +37,19 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
         // COMBO METADATA
         return {
             title: `${role.name} in ${city.name} - Verified B2B Database`,
-            description: `Connect with ${role.name} in ${city.name}. Access verified emails and phone numbers for ${role.singular} professionals in ${city.name}, ${country}.`
+            description: `Connect with ${role.name} in ${city.name}. Access verified emails and phone numbers for ${role.singular} professionals in ${city.name}, ${country}.`,
+            alternates: {
+                canonical: `https://www.buydatabase.ai/audiences/${country}/${citySlug}/${role.slug}`,
+            }
         };
     } else {
         // CITY HUB METADATA
         return {
             title: `B2B Audiences in ${city.name} - BuyDatabase.ai`,
-            description: `Browse verified B2B audiences and decision makers in ${city.name}, ${country}. Filter by role, industry, and intent.`
+            description: `Browse verified B2B audiences and decision makers in ${city.name}, ${country}. Filter by role, industry, and intent.`,
+            alternates: {
+                canonical: `https://www.buydatabase.ai/audiences/${country}/${citySlug}`,
+            }
         };
     }
 }

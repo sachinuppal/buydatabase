@@ -41,6 +41,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         return {
             title: `${dataset.name} Dataset Only - BuyDatabase.ai`,
             description: `Activate ${dataset.name}. Reach high-intent audiences in ${dataset.region}. Verified, compliant data for email, LinkedIn, and ad campaigns.`,
+            alternates: {
+                canonical: `https://www.buydatabase.ai/datasets/${slug}`,
+            }
         };
     }
 
@@ -49,6 +52,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         return {
             title: `${country.name} B2B Datasets - BuyDatabase.ai`,
             description: `Explore high-quality, verified B2B data for ${country.name}. Target decision makers, specific industries, and roles.`,
+            alternates: {
+                canonical: `https://www.buydatabase.ai/datasets/${slug}`,
+            }
         };
     }
 

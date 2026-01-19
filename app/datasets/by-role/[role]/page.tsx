@@ -29,6 +29,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     return {
         title: `${role.name} Datasets | BuyDatabase.ai`,
         description: `Download verified lists of ${role.name}.`,
+        alternates: {
+            canonical: `https://www.buydatabase.ai/datasets/by-role/${slug}`,
+        }
     };
 }
 

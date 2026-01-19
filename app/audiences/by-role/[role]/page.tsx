@@ -37,6 +37,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
         return {
             title: `${groupData.title} Audience Lists | BuyDatabase.ai`,
             description: `${groupData.description} Find verified email and phone lists for ${groupData.title}.`,
+            alternates: {
+                canonical: `https://www.buydatabase.ai/audiences/by-role/${roleSlug}`,
+            }
         };
     }
 
@@ -47,6 +50,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     return {
         title: `${roleData.name} Audience Lists by City & Industry | BuyDatabase.ai`,
         description: `Target ${roleData.name} audiences with city and industry filters. Built for outbound, ABM, hiring, partnerships, and market research workflows.`,
+        alternates: {
+            canonical: `https://www.buydatabase.ai/audiences/by-role/${roleSlug}`,
+        }
     };
 }
 

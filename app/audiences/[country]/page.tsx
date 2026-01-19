@@ -7,9 +7,22 @@ import { Breadcrumbs } from '@/components/ui/breadcrumbs';
 import { TIER_1_CITIES, ALL_CITIES, COUNTRIES } from '@/data/locations';
 import { CORE_ROLES } from '@/data/roles';
 
+import { Metadata } from 'next';
+
 export async function generateStaticParams() {
     // Phase 1: Only India
     return [{ country: 'india' }];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
+    const { country } = await params;
+    return {
+        title: `B2B Audiences in ${country === 'india' ? 'India' : country} | BuyDatabase.ai`,
+        description: `Browse verified B2B audiences and decision makers in ${country === 'india' ? 'India' : country}.`,
+        alternates: {
+            canonical: `https://www.buydatabase.ai/audiences/${country}`,
+        }
+    };
 }
 
 export default async function LocationHubPage({ params }: { params: Promise<{ country: string }> }) {
