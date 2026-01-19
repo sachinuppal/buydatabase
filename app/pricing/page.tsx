@@ -23,24 +23,40 @@ export default function PricingPage() {
             <Section>
                 <div className="max-w-5xl mx-auto space-y-20">
 
-                    {/* How pricing works */}
+                    {/* Pricing Tiers */}
                     <div>
-                        <h2 className="text-3xl font-bold mb-8 text-center">How pricing is calculated</h2>
-                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                            {[
-                                { title: "Audience Scope", desc: "Single city vs multi-city vs national/global" },
-                                { title: "Role Specificity", desc: "Broad function vs niche seniority" },
-                                { title: "Fields Included", desc: "Phone/email/company attributes, etc." },
-                                { title: "Verification", desc: "One-time pull vs ongoing refresh" },
-                                { title: "Delivery Format", desc: "Raw CSV vs normalized schema vs API-ready" },
-                            ].map((item, i) => (
-                                <div key={i} className="p-4 bg-muted/20 rounded-xl border text-center">
-                                    <div className="font-bold text-lg mb-2">{i + 1}</div>
-                                    <div className="font-bold mb-1 leading-tight">{item.title}</div>
-                                    <div className="text-xs text-muted-foreground">{item.desc}</div>
-                                </div>
-                            ))}
+                        <h2 className="text-3xl font-bold mb-8 text-center">Transparent Pricing Tiers</h2>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="border-b">
+                                        <th className="py-4 px-6 font-bold text-lg">Dataset Size</th>
+                                        <th className="py-4 px-6 font-bold text-lg">Price Per Contact</th>
+                                        <th className="py-4 px-6 font-bold text-lg">Best For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="border-b bg-muted/10">
+                                        <td className="py-4 px-6 font-medium">Up to 50,000 contacts</td>
+                                        <td className="py-4 px-6 font-bold text-primary">₹5 / contact</td>
+                                        <td className="py-4 px-6 text-muted-foreground">Startups & Niche Campaigns</td>
+                                    </tr>
+                                    <tr className="border-b">
+                                        <td className="py-4 px-6 font-medium">50,000 – 500,000 contacts</td>
+                                        <td className="py-4 px-6 font-bold text-primary">₹4 / contact</td>
+                                        <td className="py-4 px-6 text-muted-foreground">Growth Stage & Expansion</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-4 px-6 font-medium">500,000+ contacts</td>
+                                        <td className="py-4 px-6 font-bold text-primary">₹3 / contact</td>
+                                        <td className="py-4 px-6 text-muted-foreground">Enterprise & Large Scale</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                        <p className="text-center text-sm text-muted-foreground mt-6">
+                            Prices are calculated based on the total volume of the dataset.
+                        </p>
                     </div>
 
                     {/* Purchase Paths */}

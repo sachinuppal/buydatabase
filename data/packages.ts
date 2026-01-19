@@ -13,8 +13,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "department", "work_email", "phone", "city", "state", "industry"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 12890,
-        "sale_price_inr": 4499,
+        "price_inr": 60000000,
+        "sale_price_inr": 30000000,
         "delivery_type": "queued",
         "image_prompt": "Product box cover, badge '98', title 'All India Complete', subtitle 'B2B contacts at scale', icons: map, building, email"
     },
@@ -30,8 +30,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "practice_area", "city", "state", "phone", "email(optional)", "address"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 800000,
+        "sale_price_inr": 400000,
         "delivery_type": "instant",
         "image_prompt": "Badge '52', title 'Advocates / Lawyers', subtitle 'India', icons: scales, phone, map"
     },
@@ -47,8 +47,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "type", "city", "state", "phone", "email(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 199,
-        "sale_price_inr": 199,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "instant",
         "image_prompt": "Badge '37', title 'Agents', subtitle 'India', icons: handshake, phone, map"
     },
@@ -64,8 +64,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "course", "college", "city", "state", "phone(optional)", "email(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 599,
-        "sale_price_inr": 599,
+        "price_inr": 4000000,
+        "sale_price_inr": 2000000,
         "delivery_type": "queued",
         "image_prompt": "Badge '2', title 'All India Students', subtitle 'Course + college details', icons: graduation cap, email"
     },
@@ -83,8 +83,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "phone", "city", "industry", "company_size"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 999,
-        "sale_price_inr": 599,
+        "price_inr": 250000,
+        "sale_price_inr": 125000,
         "delivery_type": "instant",
         "image_prompt": "Badge '65', title 'HR Managers', subtitle 'India', icons: users, briefcase, email"
     },
@@ -100,8 +100,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "phone", "city", "linkedin(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 999,
-        "sale_price_inr": 599,
+        "price_inr": 300000,
+        "sale_price_inr": 150000,
         "delivery_type": "instant",
         "image_prompt": "Badge '70', title 'Recruiters / TA', subtitle 'India', icons: search, users, email"
     },
@@ -117,8 +117,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "phone", "city", "company_size"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1499,
-        "sale_price_inr": 999,
+        "price_inr": 50000,
+        "sale_price_inr": 25000,
         "delivery_type": "instant",
         "image_prompt": "Badge '16', title 'HR Heads', subtitle 'India', icons: crown, users, building"
     },
@@ -136,8 +136,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "phone", "city", "industry"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 1600000,
+        "sale_price_inr": 800000,
         "delivery_type": "instant",
         "image_prompt": "Badge '439', title 'BD / Sales', subtitle 'India', icons: target, phone, email"
     },
@@ -153,8 +153,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "city", "linkedin(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 999,
-        "sale_price_inr": 599,
+        "price_inr": 300000,
+        "sale_price_inr": 150000,
         "delivery_type": "instant",
         "image_prompt": "Badge '25', title 'SDR / BDR', subtitle 'India', icons: headset, email, target"
     },
@@ -170,8 +170,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "city", "industry", "company_size"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 999,
-        "sale_price_inr": 599,
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
         "delivery_type": "instant",
         "image_prompt": "Badge '62', title 'Marketing Managers', subtitle 'India', icons: megaphone, email"
     },
@@ -189,8 +189,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "city", "skills(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "instant",
         "image_prompt": "Badge '25', title 'Business Analysts', subtitle 'India', icons: chart, email"
     },
@@ -206,8 +206,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "designation", "work_email", "city", "skills(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1499,
-        "sale_price_inr": 999,
+        "price_inr": 150000,
+        "sale_price_inr": 75000,
         "delivery_type": "instant",
         "image_prompt": "Badge '10', title 'Data Scientists', subtitle 'India', icons: brain, code, email"
     },
@@ -223,8 +223,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "title", "work_email", "phone(optional)", "state", "employee_count"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 2999,
-        "sale_price_inr": 1999,
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
         "delivery_type": "queued",
         "image_prompt": "Badge '37', title 'IT Leaders', subtitle 'USA (Director+)', icons: server, building, email"
     },
@@ -242,8 +242,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["company", "contact_name(optional)", "designation(optional)", "email(optional)", "phone", "city", "website"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 50000,
+        "sale_price_inr": 25000,
         "delivery_type": "instant",
         "image_prompt": "Badge '62', title 'Garments Exporters', subtitle 'India', icons: t-shirt, ship, phone"
     },
@@ -259,8 +259,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "firm(optional)", "phone", "email(optional)", "city", "state"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "instant",
         "image_prompt": "Badge '65', title 'Architects & Interior', subtitle 'India', icons: compass, ruler, map"
     },
@@ -276,8 +276,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["business_name", "owner(optional)", "phone", "city", "state", "address(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 800000,
+        "sale_price_inr": 400000,
         "delivery_type": "instant",
         "image_prompt": "Badge '70', title 'Salons / SPA', subtitle 'India', icons: scissors, phone, map"
     },
@@ -293,8 +293,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company(optional)", "designation", "city", "phone(optional)", "email(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 299,
-        "sale_price_inr": 299,
+        "price_inr": 1200000,
+        "sale_price_inr": 600000,
         "delivery_type": "queued",
         "image_prompt": "Badge '261', title 'Call Centre Employees', subtitle 'India', icons: headset, phone, users"
     },
@@ -310,8 +310,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["business_name", "phone", "city", "state", "category", "address(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 199,
-        "sale_price_inr": 199,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "instant",
         "image_prompt": "Badge '16', title 'Building Material', subtitle 'India', icons: bricks, truck, phone"
     },
@@ -329,8 +329,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "title", "work_email(optional)", "linkedin(optional)", "industry", "funding_stage(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1499,
-        "sale_price_inr": 999,
+        "price_inr": 50000,
+        "sale_price_inr": 25000,
         "delivery_type": "queued",
         "image_prompt": "Badge '10', title 'Founders', subtitle 'Bangalore', icons: rocket, building, map"
     },
@@ -346,8 +346,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "work_email", "phone", "industry", "area(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 699,
-        "sale_price_inr": 499,
+        "price_inr": 30000,
+        "sale_price_inr": 15000,
         "delivery_type": "instant",
         "image_prompt": "Badge '12', title 'HR Managers', subtitle 'Mumbai', icons: users, map, email"
     },
@@ -365,8 +365,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "title", "work_email", "city", "industry", "company_size"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1999,
-        "sale_price_inr": 999,
+        "price_inr": 50000,
+        "sale_price_inr": 25000,
         "delivery_type": "instant",
         "image_prompt": "Badge '5K', title 'Outbound Starter Kit', subtitle 'India', icons: email, target, rocket"
     },
@@ -382,8 +382,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["company", "website", "revenue_band(optional)", "employee_count", "dm_name", "dm_title", "dm_email", "dm_phone(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 4999,
-        "sale_price_inr": 2999,
+        "price_inr": 20000,
+        "sale_price_inr": 10000,
         "delivery_type": "queued",
         "image_prompt": "Badge '200', title 'ABM: IT Top 200', subtitle 'India + Decision Makers', icons: bullseye, building, email"
     },
@@ -401,8 +401,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "title", "work_email", "city", "industry"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 999,
-        "sale_price_inr": 599,
+        "price_inr": 150000,
+        "sale_price_inr": 75000,
         "delivery_type": "instant",
         "image_prompt": "Badge '45', title 'Finance Managers', subtitle 'India', icons: rupee, email, building"
     },
@@ -418,8 +418,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "title", "work_email", "phone(optional)", "city", "industry"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1499,
-        "sale_price_inr": 999,
+        "price_inr": 100000,
+        "sale_price_inr": 50000,
         "delivery_type": "instant",
         "image_prompt": "Badge '25', title 'Procurement Heads', subtitle 'India', icons: clipboard, truck, email"
     },
@@ -436,8 +436,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["company", "plant_city(optional)", "phone", "email(optional)", "website", "category"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1999,
-        "sale_price_inr": 1499,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "queued",
         "image_prompt": "Badge '70', title 'Manufacturing Cos', subtitle 'India', icons: factory, phone, map"
     },
@@ -454,8 +454,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["company", "contact_name(optional)", "phone", "email(optional)", "city", "website"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1499,
-        "sale_price_inr": 999,
+        "price_inr": 100000,
+        "sale_price_inr": 50000,
         "delivery_type": "instant",
         "image_prompt": "Badge '62', title 'Builders', subtitle 'India', icons: crane, building, phone"
     },
@@ -472,8 +472,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "specialty", "city", "phone", "clinic(optional)", "address(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 599,
-        "sale_price_inr": 399,
+        "price_inr": 1600000,
+        "sale_price_inr": 800000,
         "delivery_type": "queued",
         "image_prompt": "Badge '98', title 'Doctors / Clinics', subtitle 'India', icons: stethoscope, phone, map"
     },
@@ -490,8 +490,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["business_name", "phone", "city", "state", "address(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 599,
-        "sale_price_inr": 399,
+        "price_inr": 1200000,
+        "sale_price_inr": 600000,
         "delivery_type": "instant",
         "image_prompt": "Badge '70', title 'Pharmacies', subtitle 'India', icons: pill, phone, map"
     },
@@ -508,8 +508,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["business_name", "phone", "city", "state", "category(optional)", "address(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 599,
-        "sale_price_inr": 399,
+        "price_inr": 1600000,
+        "sale_price_inr": 800000,
         "delivery_type": "instant",
         "image_prompt": "Badge '261', title 'Restaurants', subtitle 'India', icons: fork, phone, map"
     },
@@ -526,8 +526,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["institute_name", "phone", "city", "state", "address(optional)"],
         "update_frequency": "Quarterly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 399,
-        "sale_price_inr": 299,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "instant",
         "image_prompt": "Badge '25', title 'Coaching Centres', subtitle 'India', icons: book, phone, map"
     },
@@ -544,8 +544,8 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["company", "website", "city", "state", "employee_band(optional)", "services(optional)"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 1999,
-        "sale_price_inr": 1299,
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
         "delivery_type": "instant",
         "image_prompt": "Badge '70', title 'IT Companies', subtitle 'India', icons: code, building, map"
     },
@@ -562,34 +562,513 @@ export const ALL_PACKAGES: Package[] = [
         "fields_included": ["name", "company", "title", "work_email(optional)", "linkedin(optional)", "city"],
         "update_frequency": "Monthly",
         "formats": ["CSV", "XLSX"],
-        "price_inr": 2999,
-        "sale_price_inr": 1999,
+        "price_inr": 30000,
+        "sale_price_inr": 15000,
         "delivery_type": "queued",
         "image_prompt": "Badge '10', title 'SaaS Founders', subtitle 'India', icons: rocket, cloud, email"
     },
 
     // ---- Additional packs ----
-    { "id": "PKG033", "slug": "cxo-india", "title": "CXO List (India) – CEO/CFO/CTO/CMO", "category": "By Role", "geo": { "country": "India" }, "audience": { "group": "CXO", "role": "CXO" }, "industry": "All", "record_count_estimate": "20K–80K", "fields_included": ["name", "company", "title", "work_email(optional)", "linkedin(optional)", "city"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 4999, "sale_price_inr": 2999, "delivery_type": "queued", "image_prompt": "Badge '37', title 'CXOs', subtitle 'India', icons: crown, building, email" },
-    { "id": "PKG034", "slug": "founders-india", "title": "Founders / Co-founders (India)", "category": "By Role", "geo": { "country": "India" }, "audience": { "group": "Leadership", "role": "Founder/Co-founder" }, "industry": "Startup", "record_count_estimate": "30K–120K", "fields_included": ["name", "company", "title", "linkedin(optional)", "city", "industry"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 3999, "sale_price_inr": 2499, "delivery_type": "queued", "image_prompt": "Badge '52', title 'Founders', subtitle 'India', icons: rocket, map, building" },
-    { "id": "PKG035", "slug": "product-managers-india", "title": "Product Managers (India)", "category": "By Role", "geo": { "country": "India" }, "audience": { "group": "Product", "role": "Product Manager" }, "industry": "IT/SaaS", "record_count_estimate": "20K–80K", "fields_included": ["name", "company", "title", "work_email", "city", "skills(optional)"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 1499, "sale_price_inr": 999, "delivery_type": "instant", "image_prompt": "Badge '25', title 'Product Managers', subtitle 'India', icons: roadmap, email, building" },
-    { "id": "PKG036", "slug": "engineering-managers-india", "title": "Engineering Managers (India)", "category": "By Role", "geo": { "country": "India" }, "audience": { "group": "Engineering", "role": "Engineering Manager" }, "industry": "IT/SaaS", "record_count_estimate": "15K–60K", "fields_included": ["name", "company", "title", "work_email", "city"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 1499, "sale_price_inr": 999, "delivery_type": "instant", "image_prompt": "Badge '16', title 'Eng Managers', subtitle 'India', icons: code, email, gear" },
-    { "id": "PKG037", "slug": "qa-testers-india", "title": "QA / Test Engineers (India)", "category": "By Role", "geo": { "country": "India" }, "audience": { "group": "Engineering", "role": "QA/Test" }, "industry": "IT", "record_count_estimate": "20K–90K", "fields_included": ["name", "company", "title", "work_email(optional)", "city"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 999, "sale_price_inr": 599, "delivery_type": "instant", "image_prompt": "Badge '62', title 'QA / Test', subtitle 'India', icons: bug, check, email" },
-
-    { "id": "PKG038", "slug": "hospital-admins-india", "title": "Hospitals – Admin/Procurement Contacts (India)", "category": "Healthcare", "geo": { "country": "India" }, "audience": { "group": "Operations", "role": "Hospital Admin/Procurement" }, "industry": "Hospitals", "record_count_estimate": "5K–25K", "fields_included": ["hospital", "city", "state", "admin_name(optional)", "email(optional)", "phone"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 1999, "sale_price_inr": 1499, "delivery_type": "queued", "image_prompt": "Badge '10', title 'Hospital Admin', subtitle 'India', icons: hospital, phone, email" },
-    { "id": "PKG039", "slug": "schools-india", "title": "Schools (India) – Principal/Owner Contacts", "category": "Education", "geo": { "country": "India" }, "audience": { "group": "Education", "role": "Principal/Owner" }, "industry": "Schools", "record_count_estimate": "80K–300K", "fields_included": ["school", "city", "state", "phone", "email(optional)"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 1999, "sale_price_inr": 1299, "delivery_type": "queued", "image_prompt": "Badge '70', title 'Schools', subtitle 'India', icons: school, phone, map" },
-    { "id": "PKG040", "slug": "colleges-india", "title": "Colleges (India) – Admissions Contacts", "category": "Education", "geo": { "country": "India" }, "audience": { "group": "Education", "role": "Admissions/Registrar" }, "industry": "Colleges", "record_count_estimate": "10K–50K", "fields_included": ["college", "city", "state", "phone", "email(optional)"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 1499, "sale_price_inr": 999, "delivery_type": "instant", "image_prompt": "Badge '25', title 'Colleges', subtitle 'India', icons: graduation cap, phone, email" },
-
-    { "id": "PKG041", "slug": "retailers-india", "title": "Retail Stores / Dealers (India)", "category": "Local Businesses", "geo": { "country": "India" }, "audience": { "group": "SMB", "role": "Owner" }, "industry": "Retail", "record_count_estimate": "200K–900K", "fields_included": ["store_name", "city", "state", "phone", "category(optional)"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 999, "sale_price_inr": 599, "delivery_type": "instant", "image_prompt": "Badge '261', title 'Retailers', subtitle 'India', icons: cart, phone, map" },
-    { "id": "PKG042", "slug": "automobile-dealers-india", "title": "Automobile Dealers (India)", "category": "Automotive", "geo": { "country": "India" }, "audience": { "group": "SMB", "role": "Owner/GM" }, "industry": "Automotive", "record_count_estimate": "20K–80K", "fields_included": ["dealer", "city", "state", "phone", "brand(optional)"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 999, "sale_price_inr": 599, "delivery_type": "instant", "image_prompt": "Badge '37', title 'Auto Dealers', subtitle 'India', icons: car, phone, map" },
-
-    { "id": "PKG043", "slug": "hotels-india", "title": "Hotels / Resorts (India)", "category": "Hospitality", "geo": { "country": "India" }, "audience": { "group": "Hospitality", "role": "Owner/Manager" }, "industry": "Hotels", "record_count_estimate": "30K–120K", "fields_included": ["hotel", "city", "state", "phone", "email(optional)"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 999, "sale_price_inr": 599, "delivery_type": "instant", "image_prompt": "Badge '52', title 'Hotels', subtitle 'India', icons: hotel, phone, map" },
-    { "id": "PKG044", "slug": "travel-agents-india", "title": "Travel Agents (India)", "category": "Hospitality", "geo": { "country": "India" }, "audience": { "group": "Hospitality", "role": "Agent/Owner" }, "industry": "Travel", "record_count_estimate": "20K–90K", "fields_included": ["agency", "owner(optional)", "phone", "city", "state"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 599, "sale_price_inr": 399, "delivery_type": "instant", "image_prompt": "Badge '62', title 'Travel Agents', subtitle 'India', icons: plane, phone, map" },
-
-    { "id": "PKG045", "slug": "linkedin-ads-it-leaders-usa-pack", "title": "LinkedIn Ads Pack – IT Leaders (USA)", "category": "Use Case", "geo": { "country": "USA" }, "audience": { "group": "IT Leadership", "role": "IT Director+" }, "industry": "All", "record_count_estimate": "10K–50K", "fields_included": ["name", "company", "title", "work_email", "state", "company_size"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 4999, "sale_price_inr": 2999, "delivery_type": "queued", "image_prompt": "Badge '25', title 'LinkedIn Ads: IT Leaders', subtitle 'USA', icons: ads, server, email" },
-
-    { "id": "PKG046", "slug": "job-seekers-india", "title": "Job Seekers Database (India) – Sample Pack", "category": "Job Seekers", "geo": { "country": "India" }, "audience": { "group": "Candidates", "role": "Mixed" }, "industry": "All", "record_count_estimate": "50K–200K", "fields_included": ["name", "city", "role", "experience_band(optional)", "phone(optional)", "email(optional)"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 599, "sale_price_inr": 399, "delivery_type": "queued", "image_prompt": "Badge '70', title 'Job Seekers', subtitle 'India', icons: resume, phone, map" },
-
-    { "id": "PKG047", "slug": "startup-investors-india", "title": "Angel Investors / Micro VCs (India)", "category": "Leadership", "geo": { "country": "India" }, "audience": { "group": "Finance", "role": "Investor" }, "industry": "Venture", "record_count_estimate": "1K–5K", "fields_included": ["name", "firm(optional)", "city", "linkedin(optional)", "email(optional)"], "update_frequency": "Quarterly", "formats": ["CSV", "XLSX"], "price_inr": 2999, "sale_price_inr": 1999, "delivery_type": "queued", "image_prompt": "Badge '2', title 'Angel Investors', subtitle 'India', icons: money, handshake, map" },
-
-    { "id": "PKG048", "slug": "ecommerce-brands-india", "title": "Ecommerce / D2C Brands (India) – Company Master", "category": "By Industry", "geo": { "country": "India" }, "audience": { "group": "Companies", "role": "Founder/Marketing" }, "industry": "D2C/Ecommerce", "record_count_estimate": "5K–30K", "fields_included": ["company", "website", "category(optional)", "city", "employee_band(optional)"], "update_frequency": "Monthly", "formats": ["CSV", "XLSX"], "price_inr": 1999, "sale_price_inr": 1299, "delivery_type": "instant", "image_prompt": "Badge '16', title 'D2C Brands', subtitle 'India', icons: box, cart, map" }
+    {
+        "id": "PKG033",
+        "slug": "cxo-india",
+        "title": "CXO List (India) – CEO/CFO/CTO/CMO",
+        "category": "By Role",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "CXO",
+            "role": "CXO"
+        },
+        "industry": "All",
+        "record_count_estimate": "20K–80K",
+        "fields_included": [
+            "name",
+            "company",
+            "title",
+            "work_email(optional)",
+            "linkedin(optional)",
+            "city"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '37', title 'CXOs', subtitle 'India', icons: crown, building, email"
+    },
+    {
+        "id": "PKG034",
+        "slug": "founders-india",
+        "title": "Founders / Co-founders (India)",
+        "category": "By Role",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Leadership",
+            "role": "Founder/Co-founder"
+        },
+        "industry": "Startup",
+        "record_count_estimate": "30K–120K",
+        "fields_included": [
+            "name",
+            "company",
+            "title",
+            "linkedin(optional)",
+            "city",
+            "industry"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 300000,
+        "sale_price_inr": 150000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '52', title 'Founders', subtitle 'India', icons: rocket, map, building"
+    },
+    {
+        "id": "PKG035",
+        "slug": "product-managers-india",
+        "title": "Product Managers (India)",
+        "category": "By Role",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Product",
+            "role": "Product Manager"
+        },
+        "industry": "IT/SaaS",
+        "record_count_estimate": "20K–80K",
+        "fields_included": [
+            "name",
+            "company",
+            "title",
+            "work_email",
+            "city",
+            "skills(optional)"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '25', title 'Product Managers', subtitle 'India', icons: roadmap, email, building"
+    },
+    {
+        "id": "PKG036",
+        "slug": "engineering-managers-india",
+        "title": "Engineering Managers (India)",
+        "category": "By Role",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Engineering",
+            "role": "Engineering Manager"
+        },
+        "industry": "IT/SaaS",
+        "record_count_estimate": "15K–60K",
+        "fields_included": [
+            "name",
+            "company",
+            "title",
+            "work_email",
+            "city"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 150000,
+        "sale_price_inr": 75000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '16', title 'Eng Managers', subtitle 'India', icons: code, email, gear"
+    },
+    {
+        "id": "PKG037",
+        "slug": "qa-testers-india",
+        "title": "QA / Test Engineers (India)",
+        "category": "By Role",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Engineering",
+            "role": "QA/Test"
+        },
+        "industry": "IT",
+        "record_count_estimate": "20K–90K",
+        "fields_included": [
+            "name",
+            "company",
+            "title",
+            "work_email(optional)",
+            "city"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '62', title 'QA / Test', subtitle 'India', icons: bug, check, email"
+    },
+    {
+        "id": "PKG038",
+        "slug": "hospital-admins-india",
+        "title": "Hospitals – Admin/Procurement Contacts (India)",
+        "category": "Healthcare",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Operations",
+            "role": "Hospital Admin/Procurement"
+        },
+        "industry": "Hospitals",
+        "record_count_estimate": "5K–25K",
+        "fields_included": [
+            "hospital",
+            "city",
+            "state",
+            "admin_name(optional)",
+            "email(optional)",
+            "phone"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 50000,
+        "sale_price_inr": 25000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '10', title 'Hospital Admin', subtitle 'India', icons: hospital, phone, email"
+    },
+    {
+        "id": "PKG039",
+        "slug": "schools-india",
+        "title": "Schools (India) – Principal/Owner Contacts",
+        "category": "Education",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Education",
+            "role": "Principal/Owner"
+        },
+        "industry": "Schools",
+        "record_count_estimate": "80K–300K",
+        "fields_included": [
+            "school",
+            "city",
+            "state",
+            "phone",
+            "email(optional)"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 640000,
+        "sale_price_inr": 320000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '70', title 'Schools', subtitle 'India', icons: school, phone, map"
+    },
+    {
+        "id": "PKG040",
+        "slug": "colleges-india",
+        "title": "Colleges (India) – Admissions Contacts",
+        "category": "Education",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Education",
+            "role": "Admissions/Registrar"
+        },
+        "industry": "Colleges",
+        "record_count_estimate": "10K–50K",
+        "fields_included": [
+            "college",
+            "city",
+            "state",
+            "phone",
+            "email(optional)"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 100000,
+        "sale_price_inr": 50000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '25', title 'Colleges', subtitle 'India', icons: graduation cap, phone, email"
+    },
+    {
+        "id": "PKG041",
+        "slug": "retailers-india",
+        "title": "Retail Stores / Dealers (India)",
+        "category": "Local Businesses",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "SMB",
+            "role": "Owner"
+        },
+        "industry": "Retail",
+        "record_count_estimate": "200K–900K",
+        "fields_included": [
+            "store_name",
+            "city",
+            "state",
+            "phone",
+            "category(optional)"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 1600000,
+        "sale_price_inr": 800000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '261', title 'Retailers', subtitle 'India', icons: cart, phone, map"
+    },
+    {
+        "id": "PKG042",
+        "slug": "automobile-dealers-india",
+        "title": "Automobile Dealers (India)",
+        "category": "Automotive",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "SMB",
+            "role": "Owner/GM"
+        },
+        "industry": "Automotive",
+        "record_count_estimate": "20K–80K",
+        "fields_included": [
+            "dealer",
+            "city",
+            "state",
+            "phone",
+            "brand(optional)"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '37', title 'Auto Dealers', subtitle 'India', icons: car, phone, map"
+    },
+    {
+        "id": "PKG043",
+        "slug": "hotels-india",
+        "title": "Hotels / Resorts (India)",
+        "category": "Hospitality",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Hospitality",
+            "role": "Owner/Manager"
+        },
+        "industry": "Hotels",
+        "record_count_estimate": "30K–120K",
+        "fields_included": [
+            "hotel",
+            "city",
+            "state",
+            "phone",
+            "email(optional)"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 300000,
+        "sale_price_inr": 150000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '52', title 'Hotels', subtitle 'India', icons: hotel, phone, map"
+    },
+    {
+        "id": "PKG044",
+        "slug": "travel-agents-india",
+        "title": "Travel Agents (India)",
+        "category": "Hospitality",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Hospitality",
+            "role": "Agent/Owner"
+        },
+        "industry": "Travel",
+        "record_count_estimate": "20K–90K",
+        "fields_included": [
+            "agency",
+            "owner(optional)",
+            "phone",
+            "city",
+            "state"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 200000,
+        "sale_price_inr": 100000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '62', title 'Travel Agents', subtitle 'India', icons: plane, phone, map"
+    },
+    {
+        "id": "PKG045",
+        "slug": "linkedin-ads-it-leaders-usa-pack",
+        "title": "LinkedIn Ads Pack – IT Leaders (USA)",
+        "category": "Use Case",
+        "geo": {
+            "country": "USA"
+        },
+        "audience": {
+            "group": "IT Leadership",
+            "role": "IT Director+"
+        },
+        "industry": "All",
+        "record_count_estimate": "10K–50K",
+        "fields_included": [
+            "name",
+            "company",
+            "title",
+            "work_email",
+            "state",
+            "company_size"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 100000,
+        "sale_price_inr": 50000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '25', title 'LinkedIn Ads: IT Leaders', subtitle 'USA', icons: ads, server, email"
+    },
+    {
+        "id": "PKG046",
+        "slug": "job-seekers-india",
+        "title": "Job Seekers Database (India) – Sample Pack",
+        "category": "Job Seekers",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Candidates",
+            "role": "Mixed"
+        },
+        "industry": "All",
+        "record_count_estimate": "50K–200K",
+        "fields_included": [
+            "name",
+            "city",
+            "role",
+            "experience_band(optional)",
+            "phone(optional)",
+            "email(optional)"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 400000,
+        "sale_price_inr": 200000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '70', title 'Job Seekers', subtitle 'India', icons: resume, phone, map"
+    },
+    {
+        "id": "PKG047",
+        "slug": "startup-investors-india",
+        "title": "Angel Investors / Micro VCs (India)",
+        "category": "Leadership",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Finance",
+            "role": "Investor"
+        },
+        "industry": "Venture",
+        "record_count_estimate": "1K–5K",
+        "fields_included": [
+            "name",
+            "firm(optional)",
+            "city",
+            "linkedin(optional)",
+            "email(optional)"
+        ],
+        "update_frequency": "Quarterly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 10000,
+        "sale_price_inr": 5000,
+        "delivery_type": "queued",
+        "image_prompt": "Badge '2', title 'Angel Investors', subtitle 'India', icons: money, handshake, map"
+    },
+    {
+        "id": "PKG048",
+        "slug": "ecommerce-brands-india",
+        "title": "Ecommerce / D2C Brands (India) – Company Master",
+        "category": "By Industry",
+        "geo": {
+            "country": "India"
+        },
+        "audience": {
+            "group": "Companies",
+            "role": "Founder/Marketing"
+        },
+        "industry": "D2C/Ecommerce",
+        "record_count_estimate": "5K–30K",
+        "fields_included": [
+            "company",
+            "website",
+            "category(optional)",
+            "city",
+            "employee_band(optional)"
+        ],
+        "update_frequency": "Monthly",
+        "formats": [
+            "CSV",
+            "XLSX"
+        ],
+        "price_inr": 50000,
+        "sale_price_inr": 25000,
+        "delivery_type": "instant",
+        "image_prompt": "Badge '16', title 'D2C Brands', subtitle 'India', icons: box, cart, map"
+    }
 ];

@@ -35,52 +35,66 @@ export async function GET() {
             return NextResponse.json({ success: false, error: fetchError.message }, { status: 500 });
         }
 
-        const existingSlugs = new Set(existing?.map(p => p.slug) || []);
+        // 2. Process all packages (Upsert/Update logic)
+        let updatedCount = 0;
+        let insertedCount = 0;
 
-        // 2. Filter
-        const newPackages = ALL_PACKAGES.filter(p => !existingSlugs.has(p.slug));
+        for (const p of ALL_PACKAGES) {
+            // Check if exists
+            const { data: current } = await supabase.from('products').select('id').eq('slug', p.slug).single();
 
-        if (newPackages.length === 0) {
-            return NextResponse.json({ success: true, message: "No new packages to seed." });
-        }
+            const payload = {
+                title: p.title,
+                description: `Category: ${p.category}. Audience: ${p.audience.role}.`,
+                price_inr: p.price_inr,
+                sale_price_inr: p.sale_price_inr,
+                currency: 'INR',
+                region: p.geo.country,
+                city: p.geo.city || '',
+                role: p.audience.role,
+                industry: p.industry,
+                seniority: p.audience.group,
+                records_count: p.record_count_estimate,
+                delivery_time: p.delivery_type === 'instant' ? 'Instant' : '24-48 Hours',
+                format: p.formats.join('/'),
+                updated_at: new Date().toISOString()
+            };
 
-        // 3. Map
-        const dbRows = newPackages.map(p => ({
-            slug: p.slug,
-            title: p.title,
-            description: `Category: ${p.category}. Audience: ${p.audience.role}.`,
-            price_inr: p.price_inr,
-            sale_price_inr: p.sale_price_inr,
-            currency: 'INR',
+            if (current) {
+                // Update
+                const { error: updateError } = await supabase
+                    .from('products')
+                    .update(payload)
+                    .eq('slug', p.slug);
 
-            region: p.geo.country,
-            city: p.geo.city || '',
-            role: p.audience.role,
-            industry: p.industry,
-            seniority: p.audience.group,
+                if (updateError) {
+                    console.error(`Failed to update ${p.slug}:`, updateError);
+                } else {
+                    updatedCount++;
+                }
+            } else {
+                // Insert
+                const { error: insertError } = await supabase
+                    .from('products')
+                    .insert({
+                        slug: p.slug,
+                        created_at: new Date().toISOString(),
+                        ...payload
+                    });
 
-            records_count: p.record_count_estimate,
-            delivery_time: p.delivery_type === 'instant' ? 'Instant' : '24-48 Hours',
-            format: p.formats.join('/'),
-
-            asset_url: '',
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-        }));
-
-        // 4. Insert
-        const { error: insertError } = await supabase
-            .from('products')
-            .insert(dbRows);
-
-        if (insertError) {
-            return NextResponse.json({ success: false, error: insertError.message }, { status: 500 });
+                if (insertError) {
+                    console.error(`Failed to insert ${p.slug}:`, insertError);
+                } else {
+                    insertedCount++;
+                }
+            }
         }
 
         return NextResponse.json({
             success: true,
-            count: dbRows.length,
-            message: `Successfully inserted ${dbRows.length} products.`
+            updated: updatedCount,
+            inserted: insertedCount,
+            message: `Processed ${ALL_PACKAGES.length} packages. Updated: ${updatedCount}, Inserted: ${insertedCount}.`
         });
 
     } catch (error: any) {
